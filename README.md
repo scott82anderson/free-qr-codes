@@ -3,6 +3,7 @@
 A simple, fast, and free web app for generating static QR codes from URLs. No sign-up required, no tracking, and your QR codes never expire. Built with Next.js and React.
 
 ## Features
+
 - Generate static QR codes instantly from any URL
 - Download or copy the QR code image to your clipboard
 - Clean, modern, mobile-friendly interface
@@ -15,13 +16,13 @@ Clone the repository and install dependencies:
 ```bash
 git clone <your-repo-url>
 cd free-qr-codes
-npm install
+pnpm install
 ```
 
 Start the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -31,8 +32,8 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 To build and preview the app for production:
 
 ```bash
-npm run build
-npm start
+pnpm run build
+pnpm start
 ```
 
 ## Contributing
