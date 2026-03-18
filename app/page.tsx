@@ -3,6 +3,7 @@
 import { useState } from "react";
 import QRCode from "react-qr-code";
 import toast, { Toaster } from "react-hot-toast";
+import AdUnit from "./components/AdUnit";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -116,6 +117,7 @@ export default function Home() {
             </div>
           )}
         </section>
+        <AdUnit />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <p>© {new Date().getFullYear()} Created by Scott Anderson.</p>
