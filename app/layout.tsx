@@ -48,7 +48,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <div style={{ position: 'fixed', left: 16, bottom: 16, zIndex: 50, display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.85)', borderRadius: 8, padding: '6px 12px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+        <div style={{ position: 'fixed', right: 16, bottom: 16, zIndex: 50, display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.85)', borderRadius: 8, padding: '6px 12px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
           <span style={{ fontSize: 13, color: '#222', marginRight: 8 }}>
             This project is open source. Contributions welcome.
           </span>
