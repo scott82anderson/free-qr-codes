@@ -3,18 +3,21 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
+  { id: "intro", label: "Introduction" },
   { id: "generator", label: "QR Code Generator" },
   { id: "what-is-qr", label: "What is a QR Code?" },
   { id: "how-qr-works", label: "How QR Codes Work" },
   { id: "types", label: "Types of QR Codes" },
   { id: "use-cases", label: "Common Use Cases" },
+  { id: "step-by-step", label: "Step-by-Step Guide" },
   { id: "benefits", label: "Benefits of QR Codes" },
   { id: "best-practices", label: "Best Practices" },
+  { id: "security", label: "Security" },
   { id: "faq", label: "FAQ" },
 ];
 
 export default function Sidebar() {
-  const [activeId, setActiveId] = useState("generator");
+  const [activeId, setActiveId] = useState("intro");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +40,7 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-64 flex-col border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-black/40 z-40 overflow-y-auto">
+    <aside className="hidden lg:flex fixed top-14 left-0 h-[calc(100vh-3.5rem)] w-64 flex-col border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-black/40 z-40 overflow-y-auto">
       <div className="p-6 pb-3">
         <span className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
           Contents

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const sectionCard =
   "w-full p-6 bg-white dark:bg-black/40 rounded-lg shadow-md border border-gray-200 dark:border-gray-700";
 
@@ -23,7 +25,10 @@ export default function ContentSections() {
           Today, QR codes are used worldwide across industries — from marketing
           and retail to healthcare and education. Most modern smartphones can
           scan QR codes directly through their camera app, making them one of the
-          most accessible ways to bridge the physical and digital worlds.
+          most accessible ways to bridge the physical and digital worlds. Learn more in our{" "}
+          <Link href="/guides/qr-code-use-cases" className="text-blue-600 dark:text-blue-400 underline hover:no-underline">
+            complete guide to QR code use cases
+          </Link>.
         </p>
       </section>
 
@@ -73,6 +78,12 @@ export default function ContentSections() {
             <strong>Level H (High)</strong> — recovers up to 30% of data
           </li>
         </ul>
+        <p className="text-gray-700 dark:text-gray-300 mt-3">
+          For a deeper dive, read our guide on{" "}
+          <Link href="/guides/how-to-create-qr-code" className="text-blue-600 dark:text-blue-400 underline hover:no-underline">
+            how to create a QR code
+          </Link>.
+        </p>
       </section>
 
       {/* Types of QR Codes */}
@@ -111,6 +122,12 @@ export default function ContentSections() {
             This tool generates static QR codes — they&apos;re completely free,
             never expire, and don&apos;t depend on any third-party service.
           </p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm">
+            Learn more in our detailed{" "}
+            <Link href="/guides/static-vs-dynamic-qr-codes" className="text-blue-600 dark:text-blue-400 underline hover:no-underline">
+              static vs dynamic QR codes comparison guide
+            </Link>.
+          </p>
         </div>
       </section>
 
@@ -126,10 +143,12 @@ export default function ContentSections() {
             {
               title: "Wi-Fi Access",
               desc: "Share network credentials — guests connect with a single scan",
+              link: "/qr-code-wifi",
             },
             {
               title: "Contact Cards (vCard)",
               desc: "Encode name, phone, email, and address for instant saving",
+              link: "/qr-code-business-card",
             },
             {
               title: "Mobile Payments",
@@ -142,6 +161,7 @@ export default function ContentSections() {
             {
               title: "Restaurant Menus",
               desc: "Provide contactless access to digital menus from table cards",
+              link: "/qr-code-menu",
             },
             {
               title: "Event Tickets",
@@ -156,13 +176,77 @@ export default function ContentSections() {
               key={item.title}
               className="p-3 rounded border border-gray-200 dark:border-gray-700"
             >
-              <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
+              <h3 className="font-semibold text-sm mb-1">
+                {"link" in item && item.link ? (
+                  <Link href={item.link} className="text-blue-600 dark:text-blue-400 hover:underline">
+                    {item.title}
+                  </Link>
+                ) : (
+                  item.title
+                )}
+              </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 {item.desc}
               </p>
             </div>
           ))}
         </div>
+        <p className="text-gray-700 dark:text-gray-300 text-sm mt-3">
+          Discover more ideas in our{" "}
+          <Link href="/guides/qr-code-use-cases" className="text-blue-600 dark:text-blue-400 underline hover:no-underline">
+            guide to QR code use cases
+          </Link>.
+        </p>
+      </section>
+
+      {/* Step-by-Step Guide */}
+      <section id="step-by-step" className={sectionCard}>
+        <h2 className="text-xl font-bold mb-3">How to Create a QR Code</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Creating a QR code with our free tool takes just a few seconds. Follow these simple steps
+          to generate, customize, and use your QR code for any purpose.
+        </p>
+        <div className="space-y-4">
+          <div className="flex gap-3">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-sm">1</span>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Enter your data</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Type or paste the URL, text, or information you want to encode into the input field
+                above. This can be a website address, a link to a document, a Wi-Fi network configuration,
+                or any other text-based data.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-sm">2</span>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Generate your QR code</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Click the &ldquo;Generate&rdquo; button to create your QR code instantly. The code
+                appears on screen in seconds, rendered as a high-quality image that is ready to use.
+                The generation happens entirely in your browser — no data is sent to any server.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold text-sm">3</span>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Download or copy</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Copy the QR code image to your clipboard with one click, then paste it into any
+                document, presentation, email, or design tool. Use it in print materials like business
+                cards, flyers, posters, or menus, or embed it in digital content like websites and social media.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p className="text-gray-700 dark:text-gray-300 text-sm mt-4">
+          Need more detail? Read our{" "}
+          <Link href="/guides/how-to-create-qr-code" className="text-blue-600 dark:text-blue-400 underline hover:no-underline">
+            complete step-by-step QR code creation guide
+          </Link>.
+        </p>
       </section>
 
       {/* Benefits of QR Codes */}
@@ -236,6 +320,43 @@ export default function ContentSections() {
         </ul>
       </section>
 
+      {/* Security Considerations */}
+      <section id="security" className={sectionCard}>
+        <h2 className="text-xl font-bold mb-3">Security Considerations</h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          While QR codes themselves are simply data containers and not inherently dangerous,
+          they can be used as a vector for phishing attacks and other scams. Because you cannot
+          see the encoded URL before scanning, malicious actors sometimes place fraudulent QR codes
+          over legitimate ones in public spaces — a technique known as &ldquo;quishing&rdquo;
+          (QR code phishing).
+        </p>
+        <h3 className="text-lg font-semibold mb-2">How to Stay Safe</h3>
+        <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 mb-3">
+          <li>
+            <strong>Check the URL</strong> — after scanning, verify the URL in your browser&apos;s address bar before entering any personal information
+          </li>
+          <li>
+            <strong>Avoid suspicious codes</strong> — be cautious of QR codes on stickers placed over other codes or in unexpected locations
+          </li>
+          <li>
+            <strong>Use your phone&apos;s built-in scanner</strong> — most modern smartphones show a URL preview before opening it
+          </li>
+          <li>
+            <strong>Never scan codes requesting sensitive data</strong> — legitimate organizations rarely ask for passwords or financial details via QR code
+          </li>
+          <li>
+            <strong>Generate your own codes from trusted tools</strong> — use tools like this one that process data client-side and do not store or track your information
+          </li>
+        </ul>
+        <p className="text-gray-700 dark:text-gray-300 text-sm">
+          Read our full guide on{" "}
+          <Link href="/guides/are-qr-codes-safe" className="text-blue-600 dark:text-blue-400 underline hover:no-underline">
+            QR code safety and security
+          </Link>{" "}
+          for more tips on protecting yourself and your users.
+        </p>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className={sectionCard}>
         <h2 className="text-xl font-bold mb-3">Frequently Asked Questions</h2>
@@ -247,7 +368,7 @@ export default function ContentSections() {
             },
             {
               q: "What size should a QR code be?",
-              a: "For print, a minimum of 2 cm × 2 cm is recommended. For scanning from a distance, use the 10:1 rule — the code should be at least 1/10th the scanning distance (e.g., 10 cm for a 1-meter scan distance).",
+              a: "For print, a minimum of 2 cm \u00d7 2 cm is recommended. For scanning from a distance, use the 10:1 rule — the code should be at least 1/10th the scanning distance (e.g., 10 cm for a 1-meter scan distance).",
             },
             {
               q: "Can I customize QR code colors?",
