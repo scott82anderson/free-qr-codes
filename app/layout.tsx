@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
@@ -36,14 +35,7 @@ export default function RootLayout({
       <head>
         <meta name="keywords" content="free QR code generator, QR code maker, generate QR codes, online QR code, QR code creator, download QR codes, custom QR codes, QR code tool, QR code for website, QR code for business" />
       </head>
-      {process.env.NEXT_PUBLIC_ADSENSE_PUB_ID && (
-        <Script
-          id="google-adsense"
-          strategy="afterInteractive"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUB_ID}`}
-          crossOrigin="anonymous"
-        />
-      )}
+      {/* Monetag ads are loaded per-placement in AdUnit component */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
