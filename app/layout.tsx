@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
@@ -34,6 +35,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="keywords" content="free QR code generator, QR code maker, generate QR codes, online QR code, QR code creator, download QR codes, custom QR codes, QR code tool, QR code for website, QR code for business" />
+        <Script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="228891"
+          strategy="afterInteractive"
+        />
       </head>
       {/* Monetag ads are loaded per-placement in AdUnit component */}
       <body
