@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BuyMeACoffee from "./components/BuyMeACoffee";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,19 +44,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
-        <Script
-          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-          data-name="BMC-Widget"
-          data-cfasync="false"
-          data-id="scottanderson"
-          data-description="Support me on Buy me a coffee!"
-          data-message=""
-          data-color="#FF813F"
-          data-position="Right"
-          data-x_margin="18"
-          data-y_margin="18"
-          strategy="afterInteractive"
-        />
+        <BuyMeACoffee />
       </body>
     </html>
   );
