@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdUnit from "../../components/AdUnit";
 
 export const metadata: Metadata = {
   title: "Are QR Codes Safe? Security Guide - Free QR Code Generator",
@@ -30,8 +29,6 @@ export default function AreQRCodesSafePage() {
           to protect yourself when scanning, and how businesses should approach security when
           deploying codes for their customers.
         </p>
-
-        <AdUnit />
 
         <h2>How QR Codes Can Be Exploited</h2>
 
@@ -265,8 +262,6 @@ export default function AreQRCodesSafePage() {
           <Link href="/guides/how-to-create-qr-code">creating QR codes</Link> and{" "}
           <Link href="/guides/qr-code-use-cases">real-world QR code use cases</Link>.
         </p>
-
-        <AdUnit />
       </article>
     </main>
   );

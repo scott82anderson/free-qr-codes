@@ -35,13 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="keywords" content="free QR code generator, QR code maker, generate QR codes, online QR code, QR code creator, download QR codes, custom QR codes, QR code tool, QR code for website, QR code for business" />
-        <Script
-          src="https://quge5.com/88/tag.min.js"
-          data-zone="228891"
-          strategy="afterInteractive"
-        />
       </head>
-      {/* Monetag ads are loaded per-placement in AdUnit component */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -50,6 +44,19 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <Script
+          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+          data-name="BMC-Widget"
+          data-cfasync="false"
+          data-id="scottanderson"
+          data-description="Support me on Buy me a coffee!"
+          data-message=""
+          data-color="#FF813F"
+          data-position="Right"
+          data-x_margin="18"
+          data-y_margin="18"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

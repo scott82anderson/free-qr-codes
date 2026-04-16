@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdUnit from "../../components/AdUnit";
 
 export const metadata: Metadata = {
   title: "Static vs Dynamic QR Codes: Which Should You Use? - Free QR Code Generator",
@@ -29,8 +28,6 @@ export default function StaticVsDynamicPage() {
           type works, compares them side by side, and helps you decide which is appropriate for your
           project.
         </p>
-
-        <AdUnit />
 
         <h2>What Is a Static QR Code?</h2>
 
@@ -289,8 +286,6 @@ export default function StaticVsDynamicPage() {
           best strategy is to use static codes for permanent, stable content and reserve dynamic codes
           for campaigns and content that genuinely requires editability.
         </p>
-
-        <AdUnit />
       </article>
     </main>
   );

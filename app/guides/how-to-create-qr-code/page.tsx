@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdUnit from "../../components/AdUnit";
 
 export const metadata: Metadata = {
   title: "How to Create a QR Code: Complete Guide - Free QR Code Generator",
@@ -28,8 +27,6 @@ export default function HowToCreateQRCodePage() {
           straightforward once you understand the fundamentals. This guide walks you through every
           step, from selecting the right data type to printing a code that scans reliably every time.
         </p>
-
-        <AdUnit />
 
         <h2>Step 1: Decide What Data to Encode</h2>
 
@@ -250,8 +247,6 @@ export default function HowToCreateQRCodePage() {
           created codes, explore our guide on{" "}
           <Link href="/guides/qr-code-use-cases">creative QR code use cases</Link>.
         </p>
-
-        <AdUnit />
       </article>
     </main>
   );

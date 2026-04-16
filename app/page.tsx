@@ -1,6 +1,5 @@
 import Link from "next/link";
 import QrGenerator from "./components/QrGenerator";
-import AdUnit from "./components/AdUnit";
 import Sidebar from "./components/Sidebar";
 import ContentSections from "./components/ContentSections";
 
@@ -55,7 +54,6 @@ export default function Home() {
           </section>
 
           <QrGenerator />
-          <AdUnit />
           <ContentSections />
         </main>
       </div>

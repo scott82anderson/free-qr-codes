@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdUnit from "../../components/AdUnit";
 
 export const metadata: Metadata = {
   title: "10 Creative QR Code Use Cases for 2026 - Free QR Code Generator",
@@ -29,8 +28,6 @@ export default function QRCodeUseCasesPage() {
           and creative ways QR codes are being used right now, with real implementation details so
           you can apply them to your own projects.
         </p>
-
-        <AdUnit />
 
         <h2>1. Digital Business Cards</h2>
 
@@ -172,8 +169,6 @@ export default function QRCodeUseCasesPage() {
           codes with no context that link to a generic homepage. Be specific, be useful, and test
           your codes before you deploy them.
         </p>
-
-        <AdUnit />
       </article>
     </main>
   );

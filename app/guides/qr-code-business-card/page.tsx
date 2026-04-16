@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdUnit from "../../components/AdUnit";
 
 export const metadata: Metadata = {
   title: "How to Create a QR Code for Your Business Card - Free QR Code Generator",
@@ -29,8 +28,6 @@ export default function QRCodeBusinessCardPage() {
           what to encode, how to design the code for a business card, and how to print it so it
           scans perfectly every time.
         </p>
-
-        <AdUnit />
 
         <h2>Why Add a QR Code to Your Business Card?</h2>
 
@@ -229,8 +226,6 @@ export default function QRCodeBusinessCardPage() {
           <Link href="/guides/qr-code-use-cases">creative QR code use cases</Link> covering
           everything from restaurant menus to event ticketing and product packaging.
         </p>
-
-        <AdUnit />
       </article>
     </main>
   );

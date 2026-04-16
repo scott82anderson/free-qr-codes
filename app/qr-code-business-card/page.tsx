@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QrGenerator from "../components/QrGenerator";
-import AdUnit from "../components/AdUnit";
 
 export const metadata: Metadata = {
   title: "QR Code for Business Cards - Free QR Code Generator",
@@ -142,8 +141,6 @@ export default function QrCodeBusinessCardPage() {
           module can be at a given print size.
         </p>
       </div>
-
-      <AdUnit />
 
       <div className="prose dark:prose-invert max-w-none mt-8">
         <h2>Related Resources</h2>
